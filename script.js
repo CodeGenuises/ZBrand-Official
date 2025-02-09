@@ -131,6 +131,9 @@ filterButtons.forEach((button) => {
     filterButtons.forEach((btn) => btn.classList.remove("active"))
     button.classList.add("active")
 
+    // Scroll the clicked button into view
+    button.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" })
+
     if (filter === "all") {
       renderProducts(products)
     } else {
